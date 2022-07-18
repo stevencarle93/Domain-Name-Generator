@@ -1,11 +1,34 @@
 /* eslint-disable */
-import "bootstrap";
-import "./style.css";
+window.addEventListener("DOMContentLoaded", () => {
+  let pro = ["the", "our"];
+  let adj = ["great", "big"];
+  let nou = ["jogger", "racoon"];
+  let items = "";
+  for (let i = 0; i < pro.length; i++) {
+    let pronoun = pro[i];
+    for (let adjective of adj) {
+      nou.forEach(noun => {
+        items = items + "<li>" + pronoun + adjective + noun + ".com</li>";
+      });
+    }
+  }
+  document.getElementById("dominios").innerHTML = items;
 
-import "./assets/img/rigo-baby.jpg";
-import "./assets/img/4geeks.ico";
+  /*
 
-window.onload = function() {
-  //write your code here
-  console.log("Hello Rigo from the console!");
-};
+// Constante con funcion flecha
+const metodo = (param1, param2)=>{
+
+}
+
+//Constante con funcion anonima
+const metodo = (param1, param2){
+
+}
+
+//Funcion con nombre
+function metodo (param1, param2){
+
+}
+*/
+});
